@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Thoughts — Write to yourself.</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header class="topbar">
+  <div class="logo">✨ Thoughts</div>
+  <button class="avatar-btn">
+  <a target="_blank" href="https://github.com/catblackdev/catblackdev.github.io">✍️</a>
+  </button>
+  </header>
+
+<main class="container">
+
+  <div class="editor card">
+    <select id="mood">
+      <option value="cool">😎 Feeling Cool</option>
+      <option value="crazy">😜 Crazy</option>
+      <option value="love">😍 Love</option>
+      <option value="neutral">🙂 Neutral</option>
+      <option value="thoughtful">🤔 Thoughtful</option>
+      <option value="unhappy">😔 Unhappy</option>
+    </select>
+    <textarea id="content" placeholder="What do you think?"></textarea>
+    <button onclick="addPost()">Send</button>
+  </div>
+
+  <div id="posts"></div>
+
+</main>
+
+<button id="fabBtn" class="fab">+</button>
+
+<div id="fabMenu" class="fab-menu">
+  <div onclick="setFilter('all')">🔥 All posts</div><br/>
+  <div onclick="setFilter('favorites')">⭐ Favorites</div><br/>
+  <div onclick="setFilter('pinned')">📌 Pinned</div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
