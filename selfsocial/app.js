@@ -44,7 +44,7 @@ function initIntroPost() {
 
   const intro = {
     id: INTRO_ID,
-    text: "Write your thoughts freely. Keep your thoughts like taking notes.",
+    text: "Welcome to SelfSocial. Write to yourself.",
     moodEmoji: "🎉",
     fav: true,
     pin: true,
@@ -72,13 +72,13 @@ function render() {
     const card = document.createElement("div");
     card.className = "card";
 
-    const avatarChar = (p.id === INTRO_ID) ? "T" : avatarLetter;
+    const avatarChar = (p.id === INTRO_ID) ? "SS" : avatarLetter;
 
     card.innerHTML = `
       <div class="post-header">
         <div class="avatar">${avatarChar}</div>
         <div>
-          <strong>${p.id === INTRO_ID ? "Thoughts" : username}
+          <strong>${p.id === INTRO_ID ? "SelfSocial" : username}
             ${p.moodEmoji ? `<span style="margin-left:6px">${p.moodEmoji}</span>` : ""}
           </strong><br>
           <small>${p.time}</small>
